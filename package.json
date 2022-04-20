@@ -1,8 +1,8 @@
 {
-  "name": "@hexlet/code",
+  "name": "@hexslet/code",
+  "type": "modules",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/ArsenyKonkolovich/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/ArsenyKonkolovich/backend-project-lvl1/actions)",
-  "type": "module",
   "main": "index.js",
   "bin": {
     "backend-project-lvl1": "bin/brain-games.js"
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/ArsenyKonkolovich/backend-project-lvl1#readme",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "readline-sync": "^1.4.10"
   }
 }
