@@ -1,4 +1,7 @@
-import readlineSync from "../readline-sync";
+#!/usr/bin/env node
+
+import * as hi from "../src/cli.js";
 
 console.log("Welcome to the Brain Games!");
-console.log("May I have your name? ");
+const name = hi.askAboutName();
+console.log("Hello " + name);
