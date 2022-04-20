@@ -2,7 +2,11 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "description": "[![Actions Status](https://github.com/ArsenyKonkolovich/backend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/ArsenyKonkolovich/backend-project-lvl1/actions)",
+  "type": "module",
   "main": "index.js",
+  "bin": {
+    "backend-project-lvl1": "bin/brain-games.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/ArsenyKonkolovich/backend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/ArsenyKonkolovich/backend-project-lvl1#readme"
+  "homepage": "https://github.com/ArsenyKonkolovich/backend-project-lvl1#readme",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }
