@@ -1,5 +1,5 @@
 # Name of workflow
-name: Node_CI
+name: Node CI
 
 # Trigger the workflow on push or pull request
 on:
@@ -11,17 +11,18 @@ env:
 
 jobs:
   build:
+
     # The type of machine to run the job on
     runs-on: ubuntu-latest
 
     strategy:
       # Node versions list
       matrix:
-        node-version: [17.x]
+        node-version: [14.x]
 
     steps:
-      # Check-out repository under GitHub workspace
-      # https://github.com/actions/checkout
+        # Check-out repository under GitHub workspace
+        # https://github.com/actions/checkout
       - uses: actions/checkout@v2
         # Step's name
       - name: Use Node.js ${{ matrix.node-version }}
@@ -31,9 +32,10 @@ jobs:
         # The Node.js version to configure
         with:
           node-version: ${{ matrix.node-version }}
-          cache: "npm"
+          cache: 'npm'
       - run: make install
       - run: make lint
+      - run: make test
       # - name: Test & publish code coverage
       #   # Publish code coverage on Code Climate
       #   # https://github.com/paambaati/codeclimate-action
