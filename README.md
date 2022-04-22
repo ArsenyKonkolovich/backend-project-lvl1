@@ -6,3 +6,6 @@
 
 ### Badge NodeCI
 [![Node CI](https://github.com/ArsenyKonkolovich/backend-project-lvl1/actions/workflows/nodejs.yml/badge.svg)](https://github.com/ArsenyKonkolovich/backend-project-lvl1/actions/workflows/nodejs.yml)
+
+### Asciinema rec
+https://asciinema.org/a/Z93EQ6wsT6ECTCtm2QWNNRcT6
