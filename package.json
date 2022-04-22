@@ -6,7 +6,7 @@
   "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even" : "bin/brain-even.js"
+    "brain-even": "bin/brain-even.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,12 +22,12 @@
   },
   "homepage": "https://github.com/ArsenyKonkolovich/backend-project-lvl1#readme",
   "dependencies": {
-    "lodash": "^4.17.21",
-    "readline-sync": "^1.4.10"
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
     "eslint": "^8.13.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.26.0",
+    "readline-sync": "^1.4.10"
   }
 }
