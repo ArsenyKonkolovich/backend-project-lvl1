@@ -4,12 +4,13 @@
 // eslint-disable-next-line import/no-named-as-default
 import getRandomInt from '../src/generateRandomNumb.js';
 // eslint-disable-next-line import/no-cycle
-import * as index from '../src/index.js';
+import { getRandomOperation, sayWelcomeAndName } from '../src/index.js';
 
 const min = 0;
 const max = 99;
 
-const name = index.sayWelcomeAndName();
+console.log('Welcome to brain games!');
+const name = sayWelcomeAndName();
 console.log('What is the result of the expression?');
 
 const gameEngine = () => {
@@ -20,13 +21,11 @@ const gameEngine = () => {
     }
     const randomNumber1 = getRandomInt(min, max);
     const randomNumber2 = getRandomInt(min, max);
-    const result = index.getRandomOperation(randomNumber1, randomNumber2);
+    const result = getRandomOperation(name, randomNumber1, randomNumber2);
     if (!result) {
       break;
     }
   }
 };
-
-export default name;
 
 gameEngine();
