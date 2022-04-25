@@ -10,3 +10,4 @@
 ### Asciinema rec
 1. [brain-even](https://asciinema.org/a/Z93EQ6wsT6ECTCtm2QWNNRcT6)
 2. [brain-calc](https://asciinema.org/a/TMnReTWMZV5GJ5GMwKT6av9Lt)
+3. [brain-gcd](https://asciinema.org/a/echFZLfrxwEL5gIbbC5AN1GbG)
