@@ -1,7 +1,9 @@
+/* eslint-disable import/no-named-as-default */
 import readlineSync from 'readline-sync';
 import * as hi from './cli.js';
 // eslint-disable-next-line import/no-cycle
-import nameOfPlayer from '../bin/brain-calc.js';
+// eslint-disable-next-line import/no-named-as-default
+// eslint-disable-next-line import/no-named-as-default-member
 
 // eslint-disable-next-line import/prefer-default-export
 export const sayWelcomeAndName = () => {
@@ -10,7 +12,7 @@ export const sayWelcomeAndName = () => {
   return name;
 };
 
-const addition = (num1, num2) => {
+const addition = (name, num1, num2) => {
   const answer = readlineSync.question(`Question: ${num1} + ${num2}--> `);
   console.log(`Your answer: ${answer}!`);
   const result = num1 + num2;
@@ -18,11 +20,11 @@ const addition = (num1, num2) => {
     console.log('Correct!');
     return true;
   }
-  console.log(`${answer} is wrong answer ;(. Correct answer was ${result}. Let's try again, ${nameOfPlayer}!`);
+  console.log(`${answer} is wrong answer ;(. Correct answer was ${result}. Let's try again, ${name}!`);
   return false;
 };
 
-const subtraction = (num1, num2) => {
+const subtraction = (name, num1, num2) => {
   const result = num1 - num2;
   const answer = readlineSync.question(`Question: ${num1} - ${num2}--> `);
   console.log(`Your answer: ${answer}!`);
@@ -30,11 +32,11 @@ const subtraction = (num1, num2) => {
     console.log('Correct!');
     return true;
   }
-  console.log(`${answer} is wrong answer ;(. Correct answer was ${result}. Let's try again, ${nameOfPlayer}!`);
+  console.log(`${answer} is wrong answer ;(. Correct answer was ${result}. Let's try again, ${name}!`);
   return false;
 };
 
-const multiplication = (num1, num2) => {
+const multiplication = (name, num1, num2) => {
   const result = num1 * num2;
   const answer = readlineSync.question(`Question: ${num1} * ${num2}--> `);
   console.log(`Your answer: ${answer}!`);
@@ -42,12 +44,21 @@ const multiplication = (num1, num2) => {
     console.log('Correct!');
     return true;
   }
-  console.log(`${answer} is wrong answer ;(. Correct answer was ${result}. Let's try again, ${nameOfPlayer}!`);
+  console.log(`${answer} is wrong answer ;(. Correct answer was ${result}. Let's try again, ${name}!`);
   return false;
 };
 const arrOfOperation = [addition, subtraction, multiplication];
 
-export const getRandomOperation = (num1, num2) => {
-  const result = arrOfOperation[Math.floor(Math.random() * arrOfOperation.length)](num1, num2);
+export const getRandomOperation = (name, num1, num2) => {
+  // eslint-disable-next-line max-len
+  const result = arrOfOperation[Math.floor(Math.random() * arrOfOperation.length)](name, num1, num2);
   return result;
+};
+
+export const gcd = (num1, num2) => {
+  if (!num2) {
+    return num1;
+  }
+
+  return gcd(num2, num1 % num2);
 };
