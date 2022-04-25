@@ -7,18 +7,14 @@
 import readlineSync from 'readline-sync';
 import isEven from '../src/isEven.js';
 import getRandomInt from '../src/generateRandomNumb.js';
-import * as hi from '../src/index.js';
+import * as hi from '../src/cli.js';
 
-// minimum number, use only integer number
 const minNumb = 1;
-// maximum number, use only integer number
 const maxNumb = 100;
-
-// const randomNumb = getRandomInt(minNumb, maxNumb);
-
 const maximumTrueAnswers = 3;
 
-const name = hi.sayWelcomeAndName();
+console.log('Welcome to brain games!');
+const name = hi.askAboutName();
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
 const gameEngine = (answerCount) => {
