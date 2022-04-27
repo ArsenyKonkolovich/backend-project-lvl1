@@ -12,3 +12,4 @@
 2. [brain-calc](https://asciinema.org/a/TMnReTWMZV5GJ5GMwKT6av9Lt)
 3. [brain-gcd](https://asciinema.org/a/echFZLfrxwEL5gIbbC5AN1GbG)
 4. [brain-progression](https://asciinema.org/a/vX7PRGtGkwiWWi210AHrEFmYh)
+5. [brain-prime](https://asciinema.org/a/tX4ifaKkcnrZ1cixqOX72PLOn)
