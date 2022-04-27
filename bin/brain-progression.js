@@ -32,7 +32,10 @@ const gameEngine = () => {
     console.log(`Your answer: ${answer}!`);
     if (Number(answer) === missingElem) {
       console.log('Correct!');
-    } else { console.log(`${answer} is wrong answer ;(. Correct answer was ${missingElem}. Let's try again, ${name}!`); }
+    } else {
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${missingElem}. Let's try again, ${name}!`);
+      break;
+    }
   }
 };
 
