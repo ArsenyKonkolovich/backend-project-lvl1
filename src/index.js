@@ -20,8 +20,10 @@ const gameEngine = (startGame, rules) => {
       break;
     }
     console.log('Correct!');
+    if (i === rounds - 1) {
+      console.log(`Congratulations, ${userName}!`);
+    }
   }
-  console.log(`Congratulations, ${userName}!`);
 };
 
 export default gameEngine;
