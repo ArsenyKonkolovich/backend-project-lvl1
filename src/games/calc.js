@@ -1,7 +1,5 @@
-/* eslint-disable import/no-named-as-default-member */
-/* eslint-disable import/no-named-as-default */
-import gameEngine from '../index.js';
 import getRandomInt from '../generateRandomNumb.js';
+import gameEngine from '../index.js';
 
 const rules = 'What is the result of the expression?';
 const min = 1;
