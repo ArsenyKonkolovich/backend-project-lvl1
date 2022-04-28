@@ -3,7 +3,7 @@ import gameEngine from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
-const startGame = () => {
+const generateProgression = () => {
   const firstNumber = getRandomInt(-10, 10);
   const step = getRandomInt(1, 10);
 
@@ -13,10 +13,15 @@ const startGame = () => {
     arrOfNum[i] = arrOfNum[i - 1] + step;
   }
 
-  const missingEleomIndex = Math.floor(Math.random() * (arrOfNum.length - 1));
+  const missingEleomIndex = getRandomInt(0, arrOfNum.length - 1);
   const missingElem = arrOfNum[missingEleomIndex];
   arrOfNum[missingEleomIndex] = '..';
 
+  return [arrOfNum, missingElem];
+};
+
+const startGame = () => {
+  const [arrOfNum, missingElem] = generateProgression();
   const question = arrOfNum.join(' ');
   const correctAnswer = missingElem;
   return [question, String(correctAnswer)];
