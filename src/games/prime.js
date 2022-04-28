@@ -19,7 +19,7 @@ const isPrime = (num) => {
 };
 
 const startGame = () => {
-  const question = getRandomInt(min, max);
+  const question = String(getRandomInt(min, max));
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return [question, correctAnswer];
 };
