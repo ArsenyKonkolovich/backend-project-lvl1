@@ -5,6 +5,8 @@ import getRandomInt from '../generateRandomNumb.js';
 import gameEngine from '../index.js';
 
 const rules = 'Find the greatest common divisor of given numbers.';
+const min = 0;
+const max = 100;
 
 const gcd = (num1, num2) => {
   if (!num2) {
@@ -13,9 +15,6 @@ const gcd = (num1, num2) => {
 
   return gcd(num2, num1 % num2);
 };
-
-const min = 0;
-const max = 100;
 
 const startGame = () => {
   const firstNum = getRandomInt(min, max);
