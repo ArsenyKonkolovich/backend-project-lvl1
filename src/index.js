@@ -17,7 +17,7 @@ const gameEngine = (startGame, rules) => {
         `'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`,
       );
       console.log(`Let's try again, ${userName}!`);
-      return;
+      break;
     }
     console.log('Correct!');
   }
