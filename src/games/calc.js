@@ -15,7 +15,7 @@ const operationSigns = ['+', '-', '*'];
 const startGame = () => {
   const randomNumber1 = getRandomInt(min, max);
   const randomNumber2 = getRandomInt(min, max);
-  const indexOfRandomOperation = Math.floor(Math.random() * arrOfOperation.length);
+  const indexOfRandomOperation = getRandomInt(0, arrOfOperation.length - 1);
   const operation = arrOfOperation[indexOfRandomOperation];
   const operationSign = operationSigns[indexOfRandomOperation];
   const correctAnswer = operation(randomNumber1, randomNumber2);
