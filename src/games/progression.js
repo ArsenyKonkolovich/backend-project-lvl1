@@ -10,17 +10,16 @@ const generateProgression = (firstNumber, step) => {
     progression.push(firstNumber + (step * i));
   }
 
-  const missingEleomIndex = getRandomInt(0, progression.length - 1);
-  const missingElem = progression[missingEleomIndex];
-  progression[missingEleomIndex] = '..';
-
-  return [progression, missingElem];
+  return progression;
 };
 
 const generateRound = () => {
   const firstNumber = getRandomInt(-10, 10);
   const step = getRandomInt(1, 10);
-  const [progression, missingElem] = generateProgression(firstNumber, step);
+  const progression = generateProgression(firstNumber, step);
+  const missingEleomIndex = getRandomInt(0, progression.length - 1);
+  const missingElem = progression[missingEleomIndex];
+  progression[missingEleomIndex] = '..';
   const question = progression.join(' ');
   const correctAnswer = missingElem;
   return [question, String(correctAnswer)];
