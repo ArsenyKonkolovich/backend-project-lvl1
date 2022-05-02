@@ -4,20 +4,32 @@ import startGame from '../index.js';
 const rules = 'What is the result of the expression?';
 const min = 1;
 const max = 100;
-const addition = (num1, num2) => num1 + num2;
-const subtraction = (num1, num2) => num1 - num2;
-const multiplication = (num1, num2) => num1 * num2;
-const arrOfOperation = [addition, subtraction, multiplication];
 const operationSigns = ['+', '-', '*'];
+
+const operation = (num1, num2, OperationSigns) => {
+  let result = 0;
+  switch (OperationSigns) {
+    case '+':
+      result = num1 + num2;
+      break;
+    case '-':
+      result = num1 - num2;
+      break;
+    case '*':
+      result = num1 * num2;
+      break;
+    default:
+      break;
+  }
+  return result;
+};
 
 const generateRound = () => {
   const randomNumber1 = getRandomInt(min, max);
   const randomNumber2 = getRandomInt(min, max);
-  const indexOfRandomOperation = getRandomInt(0, arrOfOperation.length - 1);
-  const operation = arrOfOperation[indexOfRandomOperation];
-  const operationSign = operationSigns[indexOfRandomOperation];
-  const correctAnswer = operation(randomNumber1, randomNumber2);
-  const question = `Question: ${randomNumber1} ${operationSign} ${randomNumber2} --> `;
+  const RandomOperationSigns = operationSigns[getRandomInt(0, operationSigns.length - 1)];
+  const correctAnswer = operation(randomNumber1, randomNumber2, RandomOperationSigns);
+  const question = `Question: ${randomNumber1} ${RandomOperationSigns} ${randomNumber2} --> `;
   return [question, String(correctAnswer)];
 };
 
