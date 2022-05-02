@@ -9,7 +9,7 @@
 
 # Brain-Games
 
-** Simple console Games with basic arithmetics **  
+**Simple console Games with basic arithmetics**  
 
 ## Get started
 
@@ -25,7 +25,7 @@ Answer "yes" if the number is even, otherwise answer "no".
 
 Use 'brain-even' command to start.
 
-[![asciicast](https://asciinema.org/a/Z93EQ6wsT6ECTCtm2QWNNRcT6.svg)](https://asciinema.org/a/Z93EQ6wsT6ECTCtm2QWNNRcT6)
+[![asciicast](https://asciinema.org/a/sgMhgMDkwxPMjyW2XHTQj4HgB.svg)](https://asciinema.org/a/sgMhgMDkwxPMjyW2XHTQj4HgB)
 
 **Calculator**
 
