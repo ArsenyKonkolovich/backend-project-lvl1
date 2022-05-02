@@ -1,5 +1,5 @@
 import getRandomInt from '../generateRandomNumb.js';
-import gameEngine from '../index.js';
+import startGame from '../index.js';
 
 const rules = 'What number is missing in the progression?';
 
@@ -20,11 +20,11 @@ const generateProgression = () => {
   return [arrOfNum, missingElem];
 };
 
-const startGame = () => {
+const generateRound = () => {
   const [arrOfNum, missingElem] = generateProgression();
   const question = arrOfNum.join(' ');
   const correctAnswer = missingElem;
   return [question, String(correctAnswer)];
 };
 
-export default () => gameEngine(startGame, rules);
+export default () => startGame(generateRound, rules);
