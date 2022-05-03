@@ -33,7 +33,7 @@ Calculate the result of the expression.
 
 Use 'brain-calc' command to start.
 
-[![asciicast](https://asciinema.org/a/TMnReTWMZV5GJ5GMwKT6av9Lt.svg)](https://asciinema.org/a/TMnReTWMZV5GJ5GMwKT6av9Lt)
+[![asciicast](https://asciinema.org/a/VpW9wVZpHRKOvWn1ncqD3OlGx.svg)](https://asciinema.org/a/VpW9wVZpHRKOvWn1ncqD3OlGx)
 
 **Greatest Common Divisor**
 
@@ -41,7 +41,7 @@ Find the greatest common divisor of given numbers.
 
 Use 'brain-gcd' command to start.
 
-[![asciicast](https://asciinema.org/a/echFZLfrxwEL5gIbbC5AN1GbG.svg)](https://asciinema.org/a/echFZLfrxwEL5gIbbC5AN1GbG)
+[![asciicast](https://asciinema.org/a/Rt7gCR6nxZTpPlCFPZT0XmjzG.svg)](https://asciinema.org/a/Rt7gCR6nxZTpPlCFPZT0XmjzG)
 
 **Progression**
 
