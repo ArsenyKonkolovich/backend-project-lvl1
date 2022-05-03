@@ -6,29 +6,25 @@ const min = 1;
 const max = 100;
 const operationSigns = ['+', '-', '*'];
 
-const operation = (num1, num2, OperationSigns) => {
-  let result = 0;
-  switch (OperationSigns) {
+// eslint-disable-next-line consistent-return
+const operations = (num1, num2, operation) => {
+  switch (operation) {
     case '+':
-      result = num1 + num2;
-      break;
+      return num1 + num2;
     case '-':
-      result = num1 - num2;
-      break;
+      return num1 - num2;
     case '*':
-      result = num1 * num2;
-      break;
+      return num1 * num2;
     default:
       break;
   }
-  return result;
 };
 
 const generateRound = () => {
   const randomNumber1 = getRandomInt(min, max);
   const randomNumber2 = getRandomInt(min, max);
   const RandomOperationSigns = operationSigns[getRandomInt(0, operationSigns.length - 1)];
-  const correctAnswer = operation(randomNumber1, randomNumber2, RandomOperationSigns);
+  const correctAnswer = operations(randomNumber1, randomNumber2, RandomOperationSigns);
   const question = `Question: ${randomNumber1} ${RandomOperationSigns} ${randomNumber2} --> `;
   return [question, String(correctAnswer)];
 };

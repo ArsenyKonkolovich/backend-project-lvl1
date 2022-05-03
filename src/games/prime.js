@@ -8,6 +8,9 @@ const max = 100;
 
 const isPrime = (num) => {
   const sqrtNum = Math.sqrt(num);
+  if (num === 1) {
+    return false;
+  }
   for (let y = 2; y < sqrtNum; y += 1) {
     if (num % y === 0) {
       return false;
