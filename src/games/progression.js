@@ -17,9 +17,9 @@ const generateRound = () => {
   const firstNumber = getRandomInt(-10, 10);
   const step = getRandomInt(1, 10);
   const progression = generateProgression(firstNumber, step);
-  const missingEleomIndex = getRandomInt(0, progression.length - 1);
-  const correctAnswer = progression[missingEleomIndex];
-  progression[missingEleomIndex] = '..';
+  const hiddenIndex = getRandomInt(0, progression.length - 1);
+  const correctAnswer = progression[hiddenIndex];
+  progression[hiddenIndex] = '..';
   const question = progression.join(' ');
   return [question, String(correctAnswer)];
 };
